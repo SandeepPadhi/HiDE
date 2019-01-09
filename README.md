@@ -1,6 +1,6 @@
 # HiDE
 finaldemofinal.html is the main web page displaying main UI
-signup.html is for signup page
+login.html is for signup page
 
 serverCfinal.js is the main server
 
