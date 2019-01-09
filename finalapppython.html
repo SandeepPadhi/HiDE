@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+
+
+
+
+   var url = 'http://192.168.0.106:5500'; 
+    var socket = io(this.url);
+    socket.on('chat message', function(msg){
+       $('#chata').append($('<li>').text(msg));
+            //$("#ch").text(msg);
+      });
+    
+
+
+$("#send").click(function()
+{
+var data=$("#sendchat").val();
+//alert("entered value is "+data);
+socket.emit('chat message', data);
+
+
+
+
+
+
+
+});
+
+    $("#com").click(function(){
+        var data=$("#compilearea").val();
+       // alert("The paragraph was clicked."+ data);
+
+
+        $.post("chattime",
+        {
+               chatarea:data
+   
+           }
+           ,
+       function(data, status){
+       //alert("Data: " + data + "\nStatus: " + status);
+       $("#output").html("Output:<br><br> "+"The tree has following nodes:<br>"+data);
+       });
+
+
+    });
+});
+</script>
+</head>
+<body   bgcolor="120e0d">
+
+<!-- bgcolor="#ff6433"  -->
+<table width="100%"  bgcolor="#ff6433" >
+    <tr>
+        <td>
+<h1 style="text-align:center ; color:#294a8c ;"><Strong>HIDE</Strong></h1>
+</td>
+</tr>
+</table>
+
+<tr>
+
+    </tr>
+
+ </table>   
+
+
+
+       
+                
+                
+
+                
+
+
+
+<table style="width:100%" bgcolor="blue" border="2">
+
+<tr>
+    <th>
+        <table>
+            <tr>
+                <td>
+                    <table border="2" bgcolor="#33ffec" width="100%">
+                        <tr>
+                            <td>
+                        <h1>Python compiler</h1>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                        <form action="/chattime" method="post">
+                            <textarea name="chatarea" rows="20" cols="120" id="compilearea"></textarea>
+                            </form>
+                </td>
+             </tr>
+
+             <tr>
+                <td><form>
+                        <input type="button" style="width=20%" id="com" value="compile">
+                </form>
+
+                </td>
+             </tr>
+
+       </table>
+    </th>
+    <th>
+
+
+
+            <table border="2" bgcolor="#33ffec" width="100%">
+                    <tr>
+                        <td>
+                    <h1>Chatapp</h1>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <table border="2" bgcolor="white" width="100%">
+                        <tr>
+                            <td height="300">
+                        <!--<h1>Chatapp</h1>-->
+
+
+                        <div width="500" heigth="100" bgcolor="lime" align="top-left">
+                                <!--<p name="chatarea" id="chata" ></p>-->
+                                <div>
+                
+                        <div bgcolor="green" width="100">
+                                <form action="/chattime" method="post">
+                                <!--<textarea name="chatarea" rows="20" cols="30" id="chata"></textarea>-->
+                                <p name="chatarea"  style="align:left" id="chata" bgcolor="green"></p>
+                                <!--<input type="text" id="sendchat">-->
+                                
+                                <!--<input type="button" value="send" name="send" id="send"/>-->
+                                </form>
+
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="text" id="sendchat">
+                    <input type="button" value="send" name="send" id="send"/>
+
+    
+                
+    </th>
+    <tr>
+<tr >
+
+
+</tr>
+
+</table>
+<div width="100%" height="100%" bgcolor="">
+<table width="100%" height="100%"border="0" cellspacing="0" cellpadding="0" bgcolor=""> 
+<tr>
+
+
+
+       
+
+</tr>
+
+
+<tr>
+
+
+    
+        
+
+</tr>
+
+    </table>
+    </div>
+
+<table bgcolor="black" border="3" bordercolor="white" width="100%" height="100%" >
+
+        
+
+
+
+
+<tr>
+        
+
+        <td heigth="100">
+
+                <p id="output" style="color:white" >Hello</p>
+        
+        </td>
+</tr>
+
+
+
+</table>
+
+</body>
+</html>
