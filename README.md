@@ -1,3 +1,10 @@
+The Respository contains two folder:
+1)Hide1_version:This folder contains project during the development stage.
+2)HiDE_Final : This folder contains the actual project.The folder also contains the build folder which is used in NodeJS server.
+
+The instructions below are used to Run the HiDE_Final Project
+
+
 # HiDE
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
