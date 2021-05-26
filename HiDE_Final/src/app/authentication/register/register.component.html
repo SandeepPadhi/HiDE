@@ -1,0 +1,26 @@
+<div id="registerFormContainer">
+<form id="registerForm" (ngSubmit)="onSubmit(f)" #f="ngForm" >
+  <div class="registerFormField">
+      <div id="formTitle" class="formFieldText">Register</div>
+  </div>
+  <div class="registerFormField">
+    <div class="formFieldText">Username (alphanumeric)</div>
+    <input id="username" name="username" class="textField" type="text" ngModel/>
+  </div>
+  <div class="registerFormField">
+    <div class="formFieldText">E-mail</div>
+    <input id="email" name="email" class="textField" type="email" ngModel/>
+  </div>
+  <div class="registerFormField">
+    <div class="formFieldText">Password (alphanumeric with special symbols)</div>
+    <input id="password" name="password" class="textField" type="password" ngModel/>
+  </div>
+  <div class="registerFormField">
+    <div class="formFieldText">Verify Password</div>
+    <input id="repassword" name="repassword" class="textField" type="password" ngModel/>
+  </div>
+  <div id="registerSubmitContainer">
+    <input id="registerSubmit" type="submit" [disabled]="!f.valid" value="Sign Up">
+  </div>
+</form>
+</div>

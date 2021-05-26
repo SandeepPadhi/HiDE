@@ -1,0 +1,87 @@
+#registerFormContainer{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:70%;
+  top:15%;
+  left:0;
+}
+#registerForm{
+  display: flex;
+  height: 100%;
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+#formTitle{
+  font-size: 2em;
+  margin-bottom: 5vh;
+}
+.registerFormField{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  padding-bottom: 1vh;
+}
+.formFieldText{
+  padding-top:1vh;
+  padding-bottom: 1vh;
+  padding-left:10%;
+  width: 100%;
+  text-align: left;
+  font-family: 'Azonix';
+  font-size: .8em;
+  color: #2f2f2f;
+}
+.textField{
+  width: 80%;
+  padding-top:1vh;
+  padding-bottom:1vh;
+  padding-left: 3vh;
+  padding-right: 3vh;
+  border-radius: 999px;
+  border: none;
+  text-align: left;
+  font-size: 1.3em;
+  border: 1px solid #000;
+  background-color: rgba(0, 0, 0, 0);
+  transition: transform .1s linear, box-shadow .1s linear;
+}
+.textField:focus{
+  outline: none;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px .5px;
+}
+#registerSubmitContainer{
+  width: 100%;
+  padding-top:2vh;
+  padding-bottom: 2vh;
+}
+#registerSubmit{
+  padding-left: 4vh;
+  padding-right: 4vh;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  font-family: 'Azonix';
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: transform .2s linear, box-shadow .2s linear;
+}
+#registerSubmit:focus{
+  outline: none;
+  transform:scale(1.1);
+  box-shadow: 0 0 10px .5px;
+}
+#registerSubmit:hover{
+  transform:scale(1.1);
+  box-shadow: 0 0 10px .5px;
+}

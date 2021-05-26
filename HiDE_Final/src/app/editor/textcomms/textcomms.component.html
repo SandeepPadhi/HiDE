@@ -1,0 +1,27 @@
+<div id="textCommsContainer">
+  <div id="textCommsHeader" (click)="onToggle()">
+    <div *ngIf="this.noOfUnreadMessages > 0" id="noOfUM">{{ noOfUnreadMessages }}</div>
+    <div id="microphoneIcon" (click)="$event.stopPropagation()" #microphoneIcon (mousedown)="streamStart($event)" (mouseup)="streamEnd($event)"></div>
+    <div class="speaker" #speakerIcon (click)="speakerToggle($event)" id="speakerIcon"></div>
+  </div>
+  <div id="textCommsBody">
+    <div id="textCommsMessages">
+      <div
+        *ngFor="let message of messages"
+        class="messageContainer box"
+        [class.outMessage]="message.from == 'me'"
+        [class.inMessage]="message.from !== 'me'">
+
+        <div class="line" [class.leftLine]="message.from !== 'me'" [class.rightLine]="message.from == 'me'"></div>
+        <div [class.fromIn]="message.from !== 'me'" [class.fromOut]="message.from == 'me'" class="fromName" [ngStyle]="{'background-color': getRandomColor(message.from)}">{{ message.from }}</div>
+        {{ message.message }}
+      </div>
+    </div>
+  </div>
+  <div id="textCommsControls">
+    <div id="textInput">
+      <textarea #textInputField id="textInputField" noresize></textarea>
+    </div>
+    <div id="textSend" (click)="sendMessage()">Send</div>
+  </div>
+</div>

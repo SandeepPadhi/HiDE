@@ -1,0 +1,23 @@
+{
+  "name": "hidebackend",
+  "version": "1.0.0",
+  "description": "Backend for HiDE",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^2.3.4",
+    "body-parser": "^1.18.3",
+    "directory-tree": "^2.2.1",
+    "express": "^4.16.4",
+    "firebase-admin": "^6.4.0",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

@@ -1,0 +1,11 @@
+<div id="projectItemContainer">
+  <div id="projectDates">
+    <div id="projectStartDate">{{ projectStart }}</div>
+    <div id="projectEndDate">{{ projectDead }}</div>
+  </div>
+  <div id="projectInfo">
+    <div id="projectTitle">{{ projectTitle }}</div>
+    <div id="projectDesc">{{ projectDesc }}</div>
+  </div>
+  <div [ngStyle]="{'background-color': statusBackColor()}" id="projectCategory">{{ projectStatus }}</div>
+</div>

@@ -1,0 +1,228 @@
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.8);
+}
+
+@keyframes micBlink {
+  0% {
+    box-shadow: 0 0 0 0;
+  }
+  100% {
+    box-shadow: 0 0 7px 2px rgb(255, 0, 0);
+  }
+}
+
+#textCommsContainer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left:0;
+  top:0;
+  border-top-left-radius: 5vh;
+}
+#textCommsHeader{
+  position: relative;
+  width: 100%;
+  height: 10%;
+  top:0;
+  left:0;
+  background-color: rgb(156, 156, 156);
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 5;
+  box-shadow: 0px 7px 10px -3px #000;
+  border-top-left-radius: 5vh;
+}
+#noOfUM{
+  position: relative;
+  float: left;
+  margin-left: 10%;
+  top: calc(50% - 1.8vh);
+  width: 3.6vh;
+  height: 3.6vh;
+  background-color: lightgray;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px;
+  font-family: 'Roboto';
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 80%;
+  font-weight: bold;
+}
+#microphoneIcon{
+  position: relative;
+  float: right;
+  margin-right: 6%;
+  top: calc(50% - 1.8vh);
+  width: 3.6vh;
+  height: 3.6vh;
+  border-radius: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-image: url('../../../assets/images/microphone.png');
+  transition: box-shadow .1s linear;
+}
+.micAnimStart{
+  animation-name: micBlink;
+  animation-duration: .4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#microphoneIcon:hover{
+  box-shadow: 0 0 5px 1px;
+}
+#speakerIcon{
+  position: relative;
+  float: right;
+  margin-right: 6%;
+  top: calc(50% - 1.8vh);
+  width: 3.6vh;
+  height: 3.6vh;
+  border-radius: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  transition: box-shadow .1s linear;
+}
+#speakerIcon:hover{
+  box-shadow: 0 0 5px 1px;
+}
+.speaker{
+  background-image: url('../../../assets/images/speaker.png');
+}
+.nospeaker{
+  background-image: url('../../../assets/images/nospeaker.png');
+}
+#textCommsBody{
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  z-index: 4;
+  height: 75%;
+  left:0;
+  background-color: rgb(230, 230, 230);
+  overflow-y: scroll;
+}
+#textCommsMessages{
+  position: relative;
+  width: 100%;
+  height: auto;
+  top:0;
+  left: 0;
+  padding-bottom: 2%;
+}
+.messageContainer{
+  position: relative;
+  width: 60%;
+  height: auto;
+  margin-top: 4%;
+  font-family: 'Roboto';
+  padding: 1.5%;
+  font-size: 0.9em;
+}
+.inMessage{
+  float: left;
+  margin-left: 5%;
+  padding-left: 3%;
+}
+.outMessage{
+  float: right;
+  margin-right: 2%;
+  padding-right: 3%;
+}
+.line{
+  position: absolute;
+  width: 1.5%;
+  background-color: #000;
+  height: 100%;
+}
+.leftLine{
+  left:0;
+  top:0;
+}
+.rightLine{
+  right: 0;
+  top: 0;
+}
+.fromName{
+  width: auto;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border: 1px solid #555;
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+.fromIn{
+  padding-left: 2%;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+}
+.fromOut{
+  padding-right: 2%;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+  text-align: right;
+}
+#textCommsControls{
+  position: absolute;
+  z-index: 4;
+  top:85%;
+  left:0;
+  width: 96%;
+  height: 12%;
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px -7px 10px -3px #000;
+  background-color: rgb(230, 230, 230);
+}
+#textInput{
+  position: relative;
+  flex-grow: .7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+}
+#textInputField{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto';
+  border: 1px solid #555;
+  resize: none;
+}
+#textInputField:focus{
+  border: none;
+}
+#textSend{
+  flex-grow: .3;
+  background-color: rgb(185, 185, 185);
+  font-family: 'Roboto';
+  padding-top: 2%;
+  padding-bottom: 2%;
+  cursor: pointer;
+  transition: box-shadow .1s linear;
+}
+#textSend:hover{
+  box-shadow: 0 0 5px 1px #555;
+}

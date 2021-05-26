@@ -1,0 +1,23 @@
+<div id="profileContainer">
+  <div id="profileForm">
+    <div class="profileFormField">
+      <div class="formFieldText">Profile Picture</div>
+      <input (change)="onUpload($event)" #profilePic id="profilePic" name="profilePic" type="file" style="display: none"/>
+      <div id="previewContainer">
+        <div #preview id="preview" (click)="onProfilePicture()"></div>
+      </div>
+    </div>
+    <div class="profileFormField">
+      <div class="formFieldText">Description</div>
+      <div id="descriptionContainer">
+        <textarea #description rows="3" id="description" name="description"></textarea>
+      </div>
+    </div>
+    <div class="profileFormField">
+      <div id="profileActionContainer">
+        <div class="profileControl" (click)="onSave()">Save</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="profileControl" (click)="onPasswordReset()">Password Reset</div>
+      </div>
+    </div>
+  </div>
+</div>

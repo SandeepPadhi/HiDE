@@ -1,0 +1,17 @@
+<ul class="treeFolderList">
+  <li class="treeFolder" *ngFor="let dir of directories">
+      <span class="folderName" (click)="dir.expanded = !dir.expanded">
+        <div class="selectedStripFolder"></div>
+        <div class="entityNameDiv">{{ dir.name }}</div>
+      </span>
+      <div *ngIf="dir.expanded">
+          <app-tree-view [directories]="dir.children.filter(this.filterDirectories)"></app-tree-view>
+          <ul class="treeFileList">
+              <li class="treeFile" *ngFor="let file of dir.children.filter(this.filterFiles)">
+                <div class="selectedStrip"></div>
+                <div class="entityNameDiv" (dblclick)="onFileClick(file.name, file.path)">{{file.name}}</div>
+              </li>
+          </ul>
+      </div>
+  </li>
+</ul>

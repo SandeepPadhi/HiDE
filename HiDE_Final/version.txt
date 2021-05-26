@@ -1,0 +1,2 @@
+NodeVersion=		10.15
+AngularCLIVersion=	7.3.5

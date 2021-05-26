@@ -1,0 +1,76 @@
+.treeFolderList {
+  font-family: 'Roboto';
+  list-style-type: none;
+  padding: 0;
+  padding-left: 2vw;
+  color: #c7c7c7;
+}
+
+.treeFolder {
+  cursor: pointer;
+  font-size: 0.9vw;
+  list-style: none;
+  font-weight: bold;
+  line-height: 3vh;
+  z-index: 5;
+}
+
+.treeFolder::before {
+  content: '';
+  display: inline-block;
+  height: 1vw;
+  width: 1vw;
+  margin-right: 0.6vw;
+  background-image: url('../../../../assets/images/explorerFolder.png');
+  position: relative;
+  top: 0.2vw;
+  z-index: 5;
+}
+
+.folderName {
+  margin-bottom: .1vh;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.folderName:hover > .selectedStripFolder {
+  display: block;
+}
+
+.treeFileList {
+  list-style-type: none;
+}
+.fileIcon{
+  background-image: url('../../../../assets/images/file.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+.treeFile {
+  font-weight: normal;
+}
+.treeFile:hover > .selectedStrip {
+  display: block;
+}
+.selectedStrip {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 3vh;
+  background-color: rgb(183, 255, 174);
+  opacity: 1;
+  display: none;
+}
+.selectedStripFolder {
+  position: absolute;
+  width: calc(100% + 2vw);
+  left: -2vw;
+  height: 3vh;
+  background-color: rgb(183, 255, 174);
+  opacity: 1;
+  display: none;
+}
+.entityNameDiv {
+  position: relative;
+}

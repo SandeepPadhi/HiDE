@@ -1,0 +1,16 @@
+<div id="tabsContainer">
+  <div #tabsHeaderScrollContainer id="tabsHeaderScrollContainer">
+    <div id="tabsHeaderContainer">
+      <div *ngFor="let tab of tabs" [class.tabActive]="this.currActiveTab == tab.name" (click)="onTabClick(tab.name)"  class="tabHeader">
+        {{ tab.name }}
+        <div class="closeButton" (click)="onTabClose(tab)"></div>
+      </div>
+    </div>
+  </div>
+  <div id="tabContentContainer">
+    <div *ngFor="let tab of tabs" [class.tabContentActive]="this.currActiveTab == tab.name" class="tabContent">
+      <app-texteditor *ngIf="tab.name.substring(tab.name.indexOf('.') + 1) != 'node'" [content]="tab.content" [name]="tab.name" [path]="tab.path"></app-texteditor>
+      <app-nodeeditor *ngIf="tab.name.substring(tab.name.indexOf('.') + 1) == 'node'" [tabName]="tab.name"></app-nodeeditor>
+    </div>
+  </div>
+</div>

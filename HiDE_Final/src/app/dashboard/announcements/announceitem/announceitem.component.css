@@ -1,0 +1,50 @@
+#announceItemContain{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  transition: height .1s ease;
+}
+#announceInfo{
+  max-width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+}
+#announceProject{
+  width:100%;
+  height:70%;
+  font-family: 'Roboto';
+  font-weight: bold;
+}
+#announceMessage{
+  width:100%;
+  height: 30%;
+  font-family: 'Roboto';
+  font-size: .7em;
+}
+#announceDetail{
+  margin-left: 2%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  align-items: center;
+}
+#announceDatetime{
+  width:100%;
+  height:50%;
+  font-family: 'Roboto';
+  font-size: 0.7em;
+}
+#announceFrom{
+  width:100%;
+  height: 50%;
+  font-family: 'Roboto';
+  font-size: 0.7em;
+}

@@ -1,0 +1,14 @@
+<div id="announceContainer">
+  <div id="announceScrollContainer">
+    <div id="noAnnouncements">No Announcements</div>
+    <app-announceitem
+      class="announceItemContainer"
+      *ngFor="let announce of announcements"
+      [from]="announce.from"
+      [message]="announce.message"
+      [project]="announce.project"
+      [date]="announce.date"
+      [time]="announce.time">
+    </app-announceitem>
+  </div>
+</div>

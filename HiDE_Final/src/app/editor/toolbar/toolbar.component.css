@@ -1,0 +1,156 @@
+#toolbarComponentContainer{
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+}
+#upperToolbarContainer{
+  position: absolute;
+  width:100%;
+  height:50%;
+  top:0;
+  left:0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+#toolbarLogoContainer{
+  position: relative;
+  height: 100%;
+  background-image: url('../../../assets/images/hideLogoSmall.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+}
+#toolbarOptionsContainer{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.toolbarOptionItem{
+  position: relative;
+  height:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto';
+  cursor: pointer;
+  color: #A8A8A8;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  transition: background-color .1s linear;
+  font-size: .9em;
+}
+.toolbarOptionItem:hover{
+  background-color: gray;
+}
+.toolbarSuboptionsContainer{
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left:0;
+  top:100%;
+  padding-top: .5vh;
+  padding-bottom: .5vh;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #606060;
+  z-index: 6;
+  box-shadow: 1px 1px 7px .5px;
+  transition: opacity .1s linear;
+}
+.toolbarSuboptionItem{
+  position: relative;
+  width: calc(100% - 2vw);
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 2vw;
+  font-family: 'Roboto';
+  color: #fff;
+  text-align: left;
+  font-size: 12px;
+}
+.toolbarSuboptionItem:hover{
+  background-color: gray;
+}
+.toolbarSuboptionSeperator{
+  width: 100%;
+  height: 1px;
+  margin-top: .5vh;
+  margin-bottom: .5vh;
+  background-color: #000;
+}
+.toolbarSubSuboptionsContainer{
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left:100%;
+  top: -0.5vh;
+  padding-top: .5vh;
+  padding-bottom: .5vh;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #606060;
+  box-shadow: 1px 1px 7px .5px;
+  transition: opacity .1s linear;
+}
+#upperToolbarExtras{
+  flex-grow: .3;
+}
+#lowerToolbarContainer{
+  position: absolute;
+  width:calc(100% - 0.5vw);
+  height:50%;
+  top:50%;
+  left:0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding-left: 1vw;
+}
+#quickOptionsContainer{
+  height: 100%;
+  flex-grow: .7;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.quickOptionItem{
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  cursor: pointer;
+  transition: background-color .1s linear;
+}
+.quickOptionItem:hover{
+  background-color: gray;
+}
+.quickOptionSeperator{
+  position: relative;
+  width:1px;
+  background-color: #000;
+  height:45%;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}

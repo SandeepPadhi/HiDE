@@ -1,0 +1,33 @@
+<div id="projectListContainer">
+  <div id="controlBar">
+    <div id="searchBar">
+      <div id="searchBarIcon"></div>
+      <div id="searchBarField">
+        <input (input)="onSearch($event.target.value)" id="searchText" type="search" />
+      </div>
+    </div>
+    <div (click)="onSortClick()" id="sortBar">
+      <div id="sortText">Sort By</div>
+      <div #caret id="caret">&#x25b2;</div>
+        <div #sortMenu id="sortMenu">
+          <div id="sortMenuItem" (click)="onSort('date')">Date</div>
+          <div id="sortMenuItem" (click)="onSort('category')">Category</div>
+          <div id="sortMenuItem" (click)="onSort('name')">Name</div>
+        </div>
+    </div>
+    <div id="sortDirBar"></div>
+  </div>
+  <div id="projectList" >
+    <div *ngIf="projectsVisible.length <= 0" id="noProjects">No Projects Yet</div>
+    <app-projectitem
+      *ngFor="let project of projectsVisible"
+      [routerLink]="'/dashboard/project/' + project.projectid"
+      class="projectListItem"
+      [projectTitle]="project.title"
+      [projectDesc]="project.description"
+      [projectStatus]="project.status"
+      [projectStart]="project.startdate"
+      [projectDead]="project.deadline">
+    </app-projectitem>
+  </div>
+</div>

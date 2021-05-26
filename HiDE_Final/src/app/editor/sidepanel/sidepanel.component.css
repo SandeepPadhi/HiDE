@@ -1,0 +1,68 @@
+#sidePanelContainer{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+#sidePanelTopContainer{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.sidePanelTopItem{
+  width:100%;
+  padding-bottom: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 55%;
+  transition: background-color, box-shadow .1s linear;
+  cursor: pointer;
+}
+.sidePanelTopItem:hover{
+  background-color: rgb(122, 122, 122);
+  box-shadow: 0 0 5px .1px;
+}
+#explorerIcon{
+  background-image: url('../../../assets/images/explorer.png');
+  background-size: 50%;
+}
+#gitIcon{
+  background-image: url('../../../assets/images/github.png');
+}
+#sidePanelBottomContainer{
+  position: absolute;
+  top:60%;
+  left:0;
+  width:100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+.sidePanelBottomItem{
+  width:100%;
+  padding-bottom: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 55%;
+  transition: background-color, box-shadow .1s linear;
+  cursor: pointer;
+}
+.sidePanelBottomItem:hover{
+  background-color: rgb(122, 122, 122);
+  box-shadow: 0 0 5px .1px;
+}
+#settingsIcon{
+  background-image: url('../../../assets/images/settingslarge.png');
+  background-size: 50%;
+}

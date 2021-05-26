@@ -1,0 +1,94 @@
+@import "~codemirror/lib/codemirror.css";
+@import "~codemirror/theme/material.css";
+
+::-webkit-scrollbar{
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(1, 255, 115, 0.719);
+  border-radius: 0px;
+}
+
+#tabsContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#tabsHeaderScrollContainer {
+  position: absolute;
+  width: 100%;
+  height: 7vh;
+  top:0;
+  left:0;
+  overflow-x: scroll;
+  padding-left: .5%;
+  padding-right: .5%;
+}
+#tabsHeaderContainer {
+  height: 100%;
+  left:0;
+  top:0;
+  display: inline-flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+.tabHeader {
+  position: relative;
+  width: 12em;
+  height: 100%;
+  background-color: rgb(207, 207, 207);
+  margin-right: .5%;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: 'Roboto';
+  font-size: .8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid darkgray;
+}
+.tabHeader:hover > .closeButton{
+  pointer-events: all;
+  display: block;
+}
+.tabActive{
+  background-color: white;
+}
+.closeButton{
+  position: absolute;
+  right:0;
+  width: 10%;
+  padding-bottom: 10%;
+  background-image: url('../../../assets/images/closeLogo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  margin-right: 5%;
+  display: none;
+  pointer-events: none;
+}
+.closeButton:hover{
+  background-color: lightgrey;
+}
+.tabContent{
+  position: absolute;
+  left:0;
+  top:7vh;
+  height: calc(100% - 7vh);
+  width: 100%;
+  z-index: 0;
+  background-color: red;
+}
+.tabContentActive{
+  z-index: 1;
+}

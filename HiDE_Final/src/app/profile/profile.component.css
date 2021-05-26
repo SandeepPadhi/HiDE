@@ -1,0 +1,116 @@
+#profileContainer{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+#profileForm{
+  display: flex;
+  flex-direction: column;
+  width:60%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.profileFormField{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  padding-bottom: 1vh;
+}
+.formFieldText{
+  padding-top:1vh;
+  padding-bottom: 1vh;
+  padding-left:10%;
+  width: 100%;
+  text-align: left;
+  font-family: 'Azonix';
+  font-size: .8em;
+  color: #2f2f2f;
+}
+#profilePic{
+  width: 100%;
+}
+#previewContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+  width:100%;
+  height:20vh;
+  left:0;
+  padding-top:2vh;
+  padding-bottom: 2vh;
+  padding-left:10%;
+}
+#preview{
+  width:20vh;
+  height:100%;
+  background-image: url('../../assets/images/profile.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  border-radius: 2vh;
+  cursor: pointer;
+  transition: transform .1s linear, box-shadow .1s linear;
+}
+#preview:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 10px .5px;
+}
+#descriptionContainer{
+  width:100%;
+  padding-left:10%;
+}
+#description{
+  resize: none;
+  width: 100%;
+  padding-top:2vh;
+  padding-bottom:2vh;
+  margin-top:2vh;
+  padding-bottom:1vh;
+  padding-left: 3vh;
+  padding-right: 3vh;
+  font-size: 1.3em;
+  text-align: left;
+  border: 1px solid #000;
+  background-color: rgba(0, 0, 0, 0);
+  transition: transform .1s linear, box-shadow .1s linear;
+}
+#description:focus{
+  outline: none;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px .5px;
+}
+#profileActionContainer{
+  width:100%;
+  padding-left: 10%;
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.profileControl{
+  padding:1vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  cursor: pointer;
+  border: 1px solid #000;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: 'Azonix';
+  transition: transform .1s linear, box-shadow .1s linear;
+}
+.profileControl:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 10px .5px;
+}

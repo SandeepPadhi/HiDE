@@ -1,0 +1,115 @@
+<div id="toolbarComponentContainer">
+  <div id="upperToolbarContainer">
+    <div #toolbarLogoContainer id="toolbarLogoContainer" [ngStyle]="{ width: toolbarLogoContainer.clientHeight + 'px'}"></div>
+    <div id="toolbarOptionsContainer">
+      <div #fileOption (mouseenter)="toolbarOptionEnter('file')" class="toolbarOptionItem" (click)="toolbarOptionClicked('file')">
+        File
+        <div #fileSuboptionsContainer class="toolbarSuboptionsContainer">
+          <div class="toolbarSuboptionItem">New File...</div>
+          <div class="toolbarSuboptionSeperator"></div>
+          <div class="toolbarSuboptionItem">Sync</div>
+          <div class="toolbarSuboptionItem" (click)="syncAllCicked()">Sync All</div>
+          <div class="toolbarSuboptionSeperator"></div>
+          <div class="toolbarSuboptionItem">Clone</div>
+          <div class="toolbarSuboptionItem">Rename</div>
+          <div class="toolbarSuboptionItem">Refresh</div>
+          <div class="toolbarSuboptionSeperator"></div>
+          <div class="toolbarSuboptionItem">Delete</div>
+          <div class="toolbarSuboptionItem">Close All Tabs</div>
+        </div>
+      </div>
+      <div #editOption (mouseenter)="toolbarOptionEnter('edit')" class="toolbarOptionItem" (click)="toolbarOptionClicked('edit')">
+        Edit
+        <div #editSuboptionsContainer class="toolbarSuboptionsContainer">
+            <div class="toolbarSuboptionItem">Undo</div>
+            <div class="toolbarSuboptionItem">Redo</div>
+            <div class="toolbarSuboptionSeperator"></div>
+            <div class="toolbarSuboptionItem">Beautify</div>
+            <div class="toolbarSuboptionItem">Toggle Comment</div>
+            <div class="toolbarSuboptionSeperator"></div>
+            <div class="toolbarSuboptionItem">Code Folding</div>
+            <div class="toolbarSuboptionItem">Convert Case</div>
+        </div>
+      </div>
+      <div #findOption (mouseenter)="toolbarOptionEnter('find')" class="toolbarOptionItem" (click)="toolbarOptionClicked('find')">
+        Find
+        <div #findSuboptionsContainer class="toolbarSuboptionsContainer">
+            <div class="toolbarSuboptionItem">Find...</div>
+            <div class="toolbarSuboptionItem">Find Next</div>
+            <div class="toolbarSuboptionItem">Find Previous</div>
+            <div class="toolbarSuboptionSeperator"></div>
+            <div class="toolbarSuboptionItem">Replace...</div>
+            <div class="toolbarSuboptionItem">Replace Next</div>
+            <div class="toolbarSuboptionItem">Replace All</div>
+            <div class="toolbarSuboptionSeperator"></div>
+            <div class="toolbarSuboptionItem">Find in Files</div>
+        </div>
+      </div>
+      <div #viewOption (mouseenter)="toolbarOptionEnter('view')" class="toolbarOptionItem" (click)="toolbarOptionClicked('view')">
+        View
+        <div #viewSuboptionsContainer class="toolbarSuboptionsContainer">
+            <div class="toolbarSuboptionItem">
+              Layout
+              <div class="toolbarSubSuboptionsContainer">
+                <div class="toolbarSuboptionItem">Single</div>
+                <div class="toolbarSuboptionItem">Columns:2</div>
+                <div class="toolbarSuboptionItem">Columns:3</div>
+                <div class="toolbarSuboptionItem">Columns:4</div>
+                <div class="toolbarSuboptionItem">Rows:2</div>
+                <div class="toolbarSuboptionItem">Rows:3</div>
+                <div class="toolbarSuboptionItem">Grid</div>
+              </div>
+            </div>
+            <div class="toolbarSuboptionItem">File Explorer</div>
+            <div class="toolbarSuboptionSeperator"></div>
+            <div class="toolbarSuboptionItem">Increase Font Size</div>
+            <div class="toolbarSuboptionItem">Decrease Font Size</div>
+            <div class="toolbarSuboptionItem">Reset Font Size</div>
+            <div class="toolbarSuboptionSeperator"></div>
+            <div class="toolbarSuboptionItem">Errors or Warnings</div>
+            <div class="toolbarSuboptionItem">Line Numbers</div>
+            <div class="toolbarSuboptionItem">Show Hidden Files</div>
+        </div>
+      </div>
+      <div #prefOption (mouseenter)="toolbarOptionEnter('pref')" class="toolbarOptionItem" (click)="toolbarOptionClicked('pref')">
+        Preferences
+        <div #prefSuboptionsContainer class="toolbarSuboptionsContainer">
+            <div class="toolbarSuboptionItem">General</div>
+            <div class="toolbarSuboptionItem">Key Bindings</div>
+            <div class="toolbarSuboptionItem">Linting</div>
+            <div class="toolbarSuboptionItem">Snippets</div>
+            <div class="toolbarSuboptionSeperator"></div>
+            <div class="toolbarSuboptionItem">Open as JSON</div>
+        </div>
+      </div>
+      <div #helpOption (mouseenter)="toolbarOptionEnter('help')" class="toolbarOptionItem" (click)="toolbarOptionClicked('help')">
+        Help
+        <div #helpSuboptionsContainer class="toolbarSuboptionsContainer">
+            <div class="toolbarSuboptionItem">Changelog</div>
+            <div class="toolbarSuboptionSeperator"></div>
+            <div class="toolbarSuboptionItem">Documentation</div>
+            <div class="toolbarSuboptionItem">Suggest a Feature</div>
+            <div class="toolbarSuboptionSeperator"></div>
+            <div class="toolbarSuboptionItem">Terms of Service</div>
+            <div class="toolbarSuboptionItem">Privacy Policy</div>
+        </div>
+      </div>
+    </div>
+    <div id="upperToolbarExtras"></div>
+  </div>
+  <div id="lowerToolbarContainer">
+    <div id="quickOptionsContainer">
+      <div #newFileOption class="quickOptionItem" [ngStyle]="{ width: newFileOption.clientHeight + 'px', 'background-image': 'url(\'../../../assets/images/newfile.png\')' }"></div>
+      <div #syncOption class="quickOptionItem" (click)="this.syncClicked()" [ngStyle]="{ width: syncOption.clientHeight + 'px', 'background-image': 'url(\'../../../assets/images/sync.png\')' }"></div>
+      <div class="quickOptionSeperator"></div>
+      <div #undoOption class="quickOptionItem" [ngStyle]="{ width: undoOption.clientHeight + 'px', 'background-image': 'url(\'../../../assets/images/undo.png\')' }"></div>
+      <div #redoOption class="quickOptionItem" [ngStyle]="{ width: redoOption.clientHeight + 'px', 'background-image': 'url(\'../../../assets/images/redo.png\')' }"></div>
+      <div class="quickOptionSeperator"></div>
+      <div #findOption class="quickOptionItem" [ngStyle]="{ width: findOption.clientHeight + 'px', 'background-image': 'url(\'../../../assets/images/find.png\')' }"></div>
+      <div #replaceOption class="quickOptionItem" [ngStyle]="{ width: replaceOption.clientHeight + 'px', 'background-image': 'url(\'../../../assets/images/replace.png\')' }"></div>
+      <div #gotoOption class="quickOptionItem" [ngStyle]="{ width: gotoOption.clientHeight + 'px', 'background-image': 'url(\'../../../assets/images/goto.png\')' }"></div>
+      <div class="quickOptionSeperator"></div>
+      <div #settingsOption class="quickOptionItem" [ngStyle]="{ width: settingsOption.clientHeight + 'px', 'background-image': 'url(\'../../../assets/images/settings.png\')' }"></div>
+    </div>
+  </div>
+</div>

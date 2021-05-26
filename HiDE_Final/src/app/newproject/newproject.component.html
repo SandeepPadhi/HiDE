@@ -1,0 +1,56 @@
+<div id="newProjectContainer">
+  <div id="newProjectForm">
+    <div class="formField">
+      <div class="formFieldText">Project Title</div>
+      <input id="inputProjectTitle" #projectTitle type="text" />
+    </div>
+    <div class="formField">
+      <div class="formFieldText">Project Description</div>
+      <textarea id="inputProjectDesc" #projectDescription rows="3"></textarea>
+    </div>
+    <div class="formField">
+      <div class="formFieldText">Technologies</div>
+      <div id="technologiesContainer">
+        <div class="technologyItem" id="cppItem"></div>
+        <div class="technologyItem" id="javaItem"></div>
+        <div class="technologyItem" id="pyItem"></div>
+        <div class="technologyItem" id="cItem"></div>
+      </div>
+    </div>
+    <div class="formField">
+      <div class="formFieldText">Members</div>
+      <div id="membersList">
+        <div class="addedMemberItem" id="creatorAvatar"></div>
+        <div *ngFor="let selected of selectedMembers" (click)="memberRemoved(selected)" class="selectedMemberItem" [ngStyle]="{'background-image': 'url(' + selected.imgUrl + ')'}">
+          <div class="removeIcon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="formField">
+      <div class="formFieldText">Deadline</div>
+      <div id="deadlineContainer">
+        <input #deadlineDate id="deadlineDate" type="date" />
+      </div>
+    </div>
+  </div>
+  <div id="membersContainer">
+    <div class="formFieldText">Search for Members</div>
+    <div id="membersSearchBar">
+        <div id="membersSearchIcon"></div>
+      <input #searchText (keypress)="search($event.keyCode)" type="text" id="membersSearchText" />
+    </div>
+    <div id="membersResultsContainer">
+      <div id="membersResultsScroll">
+        <h4 *ngIf="searchedMembers == null || searchedMembers.length === 0" style="font-family: 'Roboto';">No Users Found</h4>
+        <div *ngFor="let member of searchedMembers" class="memberItemContainer">
+          <div (click)="memberAdded(member)" class="memberAvatar" [ngStyle]="{'background-image': 'url(' + checkImgUrl(member.imgUrl) + ')'}"></div>
+          <div class="memberUsername">{{ member.username }}</div>
+        </div>
+      </div>
+    </div>
+    <div id="membersControlsContainer">
+      <div (click)="projectCreate()" class="projectControlItem">Create</div>
+      <div (click)="projectReset()" class="projectControlItem">Reset</div>
+    </div>
+  </div>
+</div>

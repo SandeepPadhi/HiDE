@@ -1,0 +1,11 @@
+<div (mousemove)="mousePosition($event)" id="editorMainContainer">
+  <app-toolbar #toolbarMainContainer id="toolbarMainContainer"></app-toolbar>
+  <app-sidepanel #sidepanelMainContainer id="sidepanelMainContainer"></app-sidepanel>
+  <app-explorer #explorerMainContainer id="explorerMainContainer"></app-explorer>
+  <div #explorerBordertabs id="explorerBordertabs" (mouseup)="explorerTabsResizeEnd($event)" (mousedown)="explorerTabsResizeStart($event)"></div>
+  <app-tabs #tabsMainContainer id="tabsMainContainer"></app-tabs>
+  <div #tabsBorderconsole id="tabsBorderconsole" (mouseup)="tabsConsoleResizeEnd($event)" (mousedown)="tabsConsoleResizeStart($event)"></div>
+  <app-console #consoleMainContainer id="consoleMainContainer"></app-console>
+  <app-textcomms #textcommsMainContainer id="textcommsMainContainer"></app-textcomms>
+  <app-statusbar #statusbarMainContainer id="statusbarMainContainer"></app-statusbar>
+</div>

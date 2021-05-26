@@ -1,0 +1,25 @@
+<div id="projectInfoContainer">
+  <div id="projectInfoLeftContainer">
+    <div id="projectTitleContainer">{{ this.projectInfo.projectTitle }}</div>
+    <div id="projectDescContainer"> {{ this.projectInfo.projectDesc }}</div>
+    <div id="membersListContainer">
+      <div id="membersScrollContainer">
+        <div
+          *ngFor="let item of this.projectInfo.members | keyvalue"
+          class="memberAvatar"
+          [ngStyle]="{'background-image': 'url(' + item.value + ')'}">
+        </div>
+      </div>
+    </div>
+    <div id="projectDatesContainer">
+      <div id="projectStartdateContainer">Started : {{ this.projectInfo.projectStartdate }}</div>
+      <div id="projectDeadlineContainer">Deadline : {{ this.projectInfo.projectDeadline }}</div>
+    </div>
+  </div>
+  <div id="projectInfoRightContainer">
+    <div id="projectControlsContainer">
+      <div class="projectControlItem" (click)="onEdit()">Edit</div>
+      <div class="projectControlItem" (click)="onStart()">Start</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+@import '../../../../node_modules/xterm/dist/xterm.css';
+
+#consoleContainer{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: black;
+}
+#terminal{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}

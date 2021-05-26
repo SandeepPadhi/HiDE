@@ -1,0 +1,51 @@
+<div #mainHeader id="mainHeader">
+  <div id="opacityLayer" [ngStyle]="{opacity: (headerOpacityFlag) ? .9 : 0 }"></div>
+  <div #headerToggle (click)="onHeaderToggle()" id="headerToggle">{{ (headerStatusFlag) ? 'Hide Header' : 'Show Header' }}</div>
+  <div id="headerLeft">
+    <div class="headerLeftElement" id="logoContainer" (click)="onLogoClick()"></div>
+    <div class="headerLeftElement" *ngIf="authStatus()"  id="navDashboard" routerLink="/dashboard">Dashboard</div>
+  </div>
+  <div id="headerMiddle"></div>
+  <div id="headerRight">
+    <div *ngIf="this.authStatus()" (click)="onNotificationsToggle()" class="headerRightElement" id="notificationsToggle">
+      <div id="notificationsValue">{{ noOfUnreadNotifications() }}</div>
+    </div>
+    <div *ngIf="this.authStatus()" #notificationsReference class="headerRightElement" id="notificationsReference">
+      <div id="notificationsContainer">
+        <div id="notifications">
+          <div *ngIf="notifications.length <= 0" id="noNotifications">No Notifications</div>
+          <div *ngFor="let notification of notifications" class="notificationItemContainer">
+            <div class="inviteItem" *ngIf="getNotificationType(notification) === 'invite'">
+              <div class="inviteItemContentLeft">
+                <div class="inviteItemFrom">{{ notification.from }}</div>
+                <div class="inviteItemMessage">Invitation: {{ notification.message }}</div>
+              </div>
+              <div class="inviteItemContentRight">
+                <div (click)="onAcceptInvite(notification.inviteLink, notification.projectid)" class="inviteItemUrlButton">Accept</div>
+              </div>
+            </div>
+            <div class="notificationsControl">
+              <div class="readUnreadControl">
+                <div class="readIcon"></div>
+                <div class="unreadIcon"></div>
+              </div>
+              <div class="deleteControl">
+                <div class="deleteIcon"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="headerRightElement" id="userAvatarContainer">
+      <div id="userAvatar" (mouseenter)="dropdown('open')" (mouseleave)="mouseLeaveDropDown()"></div>
+      <div #userDropDown id="userDropDownContainer" (mouseenter)="catchedMouse()" (mouseleave)="dropdown('close')">
+        <div *ngIf="!authStatus()" class="userDropDownItem" routerLink="/signin">Sign in</div>
+        <ng-template [ngIf]="authStatus()">
+          <div class="userDropDownItem" (click)="onLogout()">Log out</div>
+          <div class="userDropDownItem" routerLink="/profile">Profile</div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

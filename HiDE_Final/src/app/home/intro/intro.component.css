@@ -1,0 +1,325 @@
+#introContainer{
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+}
+.introCard{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#introCard1{
+  opacity: 1;
+  z-index: 6;
+  transition: opacity .5s ease;
+}
+#introCard2{
+  z-index: 7;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  top:100%;
+  transition: top .5s ease, opacity .5s ease;
+}
+#introCard2Container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+}
+.introCard2Column{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#introCard2Left{
+  font-family: 'Azonix';
+  font-size: 2em;
+  text-align: right;
+}
+.introCardDetailItemL{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+  justify-content: flex-start;
+  padding-left: 2vw;
+  align-items: center;
+  font-family: 'Azonix';
+}
+.introCardDetailItemR{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+  justify-content: flex-end;
+  padding-right: 2vw;
+  align-items: center;
+  font-family: 'Azonix';
+}
+.detailTextR{
+  transition: transform .2s linear, opacity .2s linear;
+}
+.detailTextReplaceR{
+  position: absolute;
+  text-align: left;
+  padding-left: 10vh;
+  transform: rotateX(180deg);
+  opacity: 0;
+  transition: transform .2s linear, opacity .2s linear;
+  pointer-events: none;
+}
+.detailTextReplaceL{
+  position: absolute;
+  text-align: right;
+  padding-right:10vh;
+  transform: rotateX(180deg);
+  opacity: 0;
+  transition: transform .2s linear, opacity .2s linear;
+  pointer-events: none;
+}
+.detailTextL{
+  transition: transform .2s linear, opacity .2s linear;
+  padding-right: 10vh;
+  pointer-events: none;
+}
+.featureLogoR{
+  display: flex;
+  height: 10vh;
+  width: 10vh;
+  border-radius: 999px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  box-shadow: 0 0 10px .5px;
+  transition: transform .2s ease;
+  cursor: pointer;
+}
+.featureLogoR:hover + .detailTextR {
+  transform: rotateX(180deg);
+  opacity: 0;
+}
+.featureLogoR:hover ~ .detailTextReplaceR {
+  transform: rotateX(360deg);
+  opacity: 1;
+}
+.featureLogoL{
+  display: flex;
+  position: absolute;
+  height: 10vh;
+  width: 10vh;
+  border-radius: 999px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  box-shadow: 0 0 10px .5px;
+  transition: transform .2s ease;
+  cursor: pointer;
+}
+.featureLogoL:hover + .detailTextL {
+  transform: rotateX(180deg);
+  opacity: 0;
+}
+.featureLogoL:hover ~ .detailTextReplaceL {
+  transform: rotateX(360deg);
+  opacity: 1;
+}
+.featureLogoL:hover{
+  transform: scale(1.3);
+}
+.featureLogoR:hover{
+  transform: scale(1.3);
+}
+#voiceChat{
+  background-image: url('../../../assets/images/voiceChat.png');
+}
+#projectHistory{
+  background-image: url('../../../assets/images/projectHistory.png');
+}
+#textChat{
+  background-image: url('../../../assets/images/textChat.png');
+}
+#libraries{
+  background-image: url('../../../assets/images/libraries.png');
+}
+#devEnv{
+  background-image: url('../../../assets/images/developmentEnv.png');
+}
+#otgData{
+  background-image: url('../../../assets/images/otgData.png');
+}
+#autoSave{
+  background-image: url('../../../assets/images/autoSave.png');
+}
+#realtimeCollab{
+  background-image: url('../../../assets/images/realtimeCollab.png');
+}
+#visual{
+  background-image: url('../../../assets/images/visual.png');
+}
+#introCard3{
+  z-index: 8;
+  opacity: 0;
+  top:100%;
+  transition: top .5s ease, opacity .5s ease;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+#introCard3Container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+}
+.introCard3Column{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#introCard3Right{
+  font-family: 'Azonix';
+  font-size: 2em;
+  text-align: left;
+}
+#typingContainer{
+  position: absolute;
+  top:35vh;
+  left:15vw;
+  display: flex;
+  width: 70vw;
+  height: 30vh;
+  opacity: 1;
+  font-size: 5vw;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: top 1s ease;
+}
+#transformText{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: flex;
+  opacity: 1;
+  font-family: 'Arial';
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: opacity .3s linear;
+}
+#transformLogo{
+  position: absolute;
+  display: flex;
+  width:35vw;
+  height:20vh;
+  opacity: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../../assets/images/hideLogo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  transition: opacity .3s linear;
+}
+#servicesContainer{
+  position: absolute;
+  top:30vh;
+  left:5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  width:90vw;
+  height:60vh;
+  opacity: 0;
+  transition: opacity .3s linear;
+}
+.servicesContainerRow{
+  display: flex;
+  flex-direction: row;
+  height:50%;
+  width: 100%;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.servicesItem{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  height:100%;
+  width:20%;
+}
+#cLogo{
+  background-image: url('../../../assets/images/cLogo.png');
+}
+#javaLogo{
+  background-image: url('../../../assets/images/javaLogo.png');
+}
+#pythonLogo{
+  background-image: url('../../../assets/images/pythonLogo.png');
+}
+#javascriptLogo{
+  background-image: url('../../../assets/images/javascriptLogo.png');
+}
+#nodejsLogo{
+  background-image: url('../../../assets/images/nodejsLogo.png');
+}
+#cppLogo{
+  background-image: url('../../../assets/images/cppLogo.png');
+}
+#angularLogo{
+  background-image: url('../../../assets/images/angularLogo.png');
+}
+#mysqlLogo{
+  background-image: url('../../../assets/images/mysqlLogo.png');
+}
+#csLogo{
+  background-image: url('../../../assets/images/csLogo.png');
+}
+#cssLogo{
+  background-image: url('../../../assets/images/cssLogo.png');
+}
+#phpLogo{
+  background-image: url('../../../assets/images/phpLogo.png');
+}
+#htmlLogo{
+  background-image: url('../../../assets/images/htmlLogo.png');
+}

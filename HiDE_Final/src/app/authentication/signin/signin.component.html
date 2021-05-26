@@ -1,0 +1,19 @@
+<div id="signinFormContainer">
+  <form id="signinForm" (ngSubmit)="onSubmit(f)" #f="ngForm" >
+    <div class="signinFormField">
+      <div id="formTitle" class="formFieldText">Sign in</div>
+    </div>
+    <div class="signinFormField">
+      <div class="formFieldText">Username (alphanumeric)</div>
+      <input id="username" name="username" class="textField" type="text" ngModel/>
+    </div>
+    <div class="signinFormField">
+      <div class="formFieldText">Password</div>
+      <input id="password" name="password" class="textField" type="password" ngModel/>
+    </div>
+    <div id="signinSubmitContainer">
+      <input id="signinSubmit" type="submit" value="Sign In">
+    </div>
+    <div id="registerLink" (click)="dontHaveAccount()">Don't have an Account ? Register Here</div>
+  </form>
+  </div>

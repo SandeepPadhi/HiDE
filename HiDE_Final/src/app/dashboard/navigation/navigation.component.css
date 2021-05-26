@@ -1,0 +1,42 @@
+#navContainer{
+  height: 97vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.navControlItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width:80%;
+  height:6%;
+  margin-top: 10%;
+  background-color: #fff;
+  border-radius: 999px;
+  box-shadow: 0 0 7px .5px;
+  cursor: pointer;
+  transition: transform .1s linear;
+}
+.navControlItem:hover{
+  transform: scale(1.05);
+}
+.navControlIcon{
+  height: 0;
+  width: 30%;
+  padding-bottom: 30%;
+  margin-left:5%;
+  background-image: url('../../../assets/images/addProj.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  border-radius: 50%;
+}
+.navControlText{
+  font-family: 'Roboto';
+  font-weight: bold;
+  margin-right:20%;
+}

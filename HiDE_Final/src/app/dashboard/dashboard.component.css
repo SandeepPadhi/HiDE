@@ -1,0 +1,34 @@
+*{
+  box-sizing: border-box;
+}
+#navigationContainer{
+  opacity: .8;
+  grid-area: n;
+}
+#projectlistContainer{
+  opacity: .8;
+  grid-area: p;
+}
+#announcementsContainer{
+  opacity: .8;
+  grid-area: no;
+}
+#statsContainer{
+  opacity: .8;
+  grid-area: st;
+}
+#dashboardContainer{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 6fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'n p no'
+    'n p st';
+  grid-gap: 1.5vh;
+  padding:1.5vh;
+}

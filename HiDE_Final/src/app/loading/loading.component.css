@@ -1,0 +1,63 @@
+@keyframes loadingItemAnimation {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.loadingAnimation{
+  animation-name: loadingItemAnimation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+#loadingScreen{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s linear;
+  background-color: white;
+}
+#loadingLogo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height:20%;
+}
+.loadingItemStatic{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Azonix';
+  font-size: 3em;
+}
+.loadingItemDynamic{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Azonix';
+  font-size: 3em;
+}
+#loadingMessage{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: 'Azonix';
+}

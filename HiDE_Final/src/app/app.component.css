@@ -1,0 +1,44 @@
+#appNotify{
+  position: absolute;
+  top:-15%;
+  width: 40%;
+  height:15%;
+  left:30%;
+  z-index: 19;
+}
+#appLoading{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  z-index: 0;
+}
+#appHeader{
+  position: absolute;
+  top:-15%;
+  left:0;
+  width:100%;
+  height:15%;
+  z-index: 10;
+}
+#home{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+#backgroundContainer{
+  position: absolute;
+  opacity: .5;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background-image: url('../assets/images/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  filter: blur(6px);
+}
