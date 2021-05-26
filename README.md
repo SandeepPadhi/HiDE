@@ -1,3 +1,13 @@
+
+ABstract:
+Hybrid Development Environment |  NodeJs,  AngularJS, Firebase, HTML, CSS,  Javascript , Linux                     Sept,2018  - April, 2019                    
+▪ Cloud based Project Development and Management System on the lines of VS Code. 
+▪ Follows 3-Tier Client Server Architecture , involves a backend Server for communication with the client,  a linux server 
+  to run projects via CLI on frontend and Firebase for Database  and Authentication. 
+▪ Features: Project development on any technology supported by Linux, built In Text Editor, Terminal Support,Project Sharing,Real-Time Collaboration similar to     google docs and Authentication via Tokenization.
+▪ Key challenge: Implementing the System Design Architecture, maintaining data flow among various components and  debugging.
+
+
 The Respository contains two folder:
 1)Hide1_version:This folder contains project during the development stage.
 2)HiDE_Final : This folder contains the actual project.The folder also contains the build folder which is used in NodeJS server.
