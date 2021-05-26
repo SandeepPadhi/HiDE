@@ -17,6 +17,6 @@
     "mysql": "^2.16.0",
     "object-length": "^0.2.0",
     "path": "^0.12.7",
-    "socket.io": "^2.1.1"
+    "socket.io": "^2.4.0"
   }
 }
