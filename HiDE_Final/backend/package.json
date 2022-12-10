@@ -13,7 +13,7 @@
     "@google-cloud/storage": "^2.3.4",
     "body-parser": "^1.18.3",
     "directory-tree": "^2.2.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "firebase-admin": "^6.4.0",
     "socket.io": "^2.2.0"
   },
